@@ -1,7 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-export const ProjectItem = ({title, description, tech, img}) => {
+export const ProjectItem = ({title, description, tech, img, link}) => {
+    const handleLinkClick = (event) => {
+        window.location.href = link;
+    };
+
     return (
         <div className='project'>
             <Row>
@@ -9,7 +13,7 @@ export const ProjectItem = ({title, description, tech, img}) => {
                     <img src={img} alt={title} style={{ maxWidth: '100%', height: '100%' }}/>
                 </Col>
                 <Col className='project-about'>
-                    <h1 href="" className="project-title">{title}</h1>
+                    <a href={link} className="project-title" onClick={handleLinkClick}>{title}</a>
                     <p className="project-description">{description}</p>
                     <ul className="mt-2 flex flex-wrap">
                         {tech.map((t) => (
