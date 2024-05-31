@@ -3,7 +3,7 @@ import { Container, Row, Col, Accordion, Card, Button } from 'react-bootstrap';
 
 export function About() {
     return (
-        <div className='about'>
+        <div className='#about'>
                 <Container href="#about" fluid className="about-top-section">
                     <div className='text-center'>
                         <p className='about-text'>

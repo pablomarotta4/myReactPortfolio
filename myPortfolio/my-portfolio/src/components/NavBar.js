@@ -32,17 +32,6 @@ export function MainNav() {
         <>
             <Navbar expand="lg" className={scroll ? "scroll": ""}>
                 <Container>
-                        <Navbar.Brand href="#home">
-                            <div>
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/128/826/826908.png"
-                                width="30px"
-                                height="30px"
-                                className="d-inline-block align-top"
-                                alt="Pablo Marotta"
-                            />
-                            </div>
-                        </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav">
                         <span className="navbar-toggler-icon"></span>
                     </Navbar.Toggle>
