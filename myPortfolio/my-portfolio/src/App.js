@@ -5,6 +5,7 @@ import About from './components/About'; // Importa About y asignalo a una variab
 import Projects from './components/Projects'; // Importa Projects y asignalo a una variable
 import Contact from './components/Contact'; // Importa Contact y asignalo a una variable
 import Footer from './components/Footer'; // Importa Footer y asignalo a una variable
+import Cv from './components/Cv'; // Importa Cv y asignalo a una variable
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 
@@ -21,6 +22,7 @@ const App = () => {
       <MainNav/>
       <Banner/>
       <About/>
+      <Cv/>
       <Projects/>
       <Contact/>
       <Footer/>
