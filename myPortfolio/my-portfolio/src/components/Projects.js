@@ -11,15 +11,15 @@ export function Projects() {
             title: "TrabajoUY",
             description: "TrabajoUY es una plataforma de búsqueda de empleo que conecta a empresas con candidatos. La plataforma permite a los usuarios buscar empleo, postularse a ofertas laborales y a las empresas publicar ofertas de trabajo.",
             tech: ["Java", "Servlets", "Web Services", "HTML", "CSS", "Meaven", "JSP"],
-            img: "https://gitlab.fing.edu.uy/joaquin.cabrera.pastor/trabajouy/-/raw/master/src/main/webapp/media/images/trabajoUy.png?ref_type=heads",
+            img: process.env.PUBLIC_URL + "/trabajoUy.png",           
             link: "https://gitlab.fing.edu.uy/pablo.marotta/trabajo-uy.git"
         },
         {
             title : "Portfolio utilizando HTML, CSS y JavaScript",
             description : "Este es mi portfolio personal. El mismo fue desarrollado utilizando HTML, CSS y JavaScript para el curso de desarrollador web de IBM.",
             tech : ["HTML", "CSS", "JavaScript"],
-            img : "https://cdn-icons-png.flaticon.com/512/686/686104.png",
-            link : "https://github.com/pablomarotta4/jsPortfolio"
+            img: process.env.PUBLIC_URL + "/portfolio.png",
+            link : ""
         }
     ];
 

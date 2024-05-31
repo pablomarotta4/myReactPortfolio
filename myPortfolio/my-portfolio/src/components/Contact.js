@@ -105,7 +105,7 @@ export const Contact = () => {
                                 </Row>
                                 <Row>
                                     <Col className='form-field'>
-                                        <label>Correo electrónico</label>
+                                        <label>Email</label>
                                         <input className="custom-input" type="email" name="user_email" />
                                         {errors.email && <p className="error-message">{errors.email}</p>}
                                     </Col>

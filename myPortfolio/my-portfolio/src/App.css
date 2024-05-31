@@ -561,6 +561,12 @@ nav.navbar .navbar-toggler{
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .cv-container img {
+    width: 100%;
+  }
+}
+
 
 @keyframes App-logo-spin {
   from {
