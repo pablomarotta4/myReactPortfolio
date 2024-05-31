@@ -19,7 +19,7 @@ export function Projects() {
             description : "Este es mi portfolio personal. El mismo fue desarrollado utilizando HTML, CSS y JavaScript para el curso de desarrollador web de IBM.",
             tech : ["HTML", "CSS", "JavaScript"],
             img : "https://cdn-icons-png.flaticon.com/512/686/686104.png",
-            link : "https://www.twitch.tv/awenotv"
+            link : "https://github.com/pablomarotta4/jsPortfolio"
         }
     ];
 
