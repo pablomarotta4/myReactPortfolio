@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/myReactPortfolio/static/css/main.d93f1e72.css",
-    "main.js": "/myReactPortfolio/static/js/main.c1e9412c.js",
+    "main.css": "/myReactPortfolio/static/css/main.cff95cca.css",
+    "main.js": "/myReactPortfolio/static/js/main.4204db41.js",
     "static/js/592.6647c214.chunk.js": "/myReactPortfolio/static/js/592.6647c214.chunk.js",
     "static/media/RobotoMono-VariableFont_wght.ttf": "/myReactPortfolio/static/media/RobotoMono-VariableFont_wght.e14e25b7c497634efdfe.ttf",
     "static/media/PlusJakartaSans-Italic-VariableFont_wght.ttf": "/myReactPortfolio/static/media/PlusJakartaSans-Italic-VariableFont_wght.8eca6f78230e2b1fc1f5.ttf",
     "static/media/VarelaRound-Regular.ttf": "/myReactPortfolio/static/media/VarelaRound-Regular.e67ccd4a92677fdf8719.ttf",
     "index.html": "/myReactPortfolio/index.html",
-    "main.d93f1e72.css.map": "/myReactPortfolio/static/css/main.d93f1e72.css.map",
-    "main.c1e9412c.js.map": "/myReactPortfolio/static/js/main.c1e9412c.js.map",
+    "main.cff95cca.css.map": "/myReactPortfolio/static/css/main.cff95cca.css.map",
+    "main.4204db41.js.map": "/myReactPortfolio/static/js/main.4204db41.js.map",
     "592.6647c214.chunk.js.map": "/myReactPortfolio/static/js/592.6647c214.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d93f1e72.css",
-    "static/js/main.c1e9412c.js"
+    "static/css/main.cff95cca.css",
+    "static/js/main.4204db41.js"
   ]
 }
