@@ -19,7 +19,7 @@ export function Projects() {
             description : "Este es mi portfolio personal. El mismo fue desarrollado utilizando HTML, CSS y JavaScript para el curso de desarrollador web de IBM.",
             tech : ["HTML", "CSS", "JavaScript"],
             img: process.env.PUBLIC_URL + "/portfolio.png",
-            link : ""
+            link : "https://pablomarotta4.github.io/jsPortfolio/"
         }
     ];
 
