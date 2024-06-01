@@ -12,7 +12,7 @@ export function Projects() {
             description: "TrabajoUY es una plataforma de búsqueda de empleo que conecta a empresas con candidatos. La plataforma permite a los usuarios buscar empleo, postularse a ofertas laborales y a las empresas publicar ofertas de trabajo.",
             tech: ["Java", "Servlets", "Web Services", "HTML", "CSS", "Meaven", "JSP"],
             img: process.env.PUBLIC_URL + "/trabajoUy.png",           
-            link: "https://gitlab.fing.edu.uy/pablo.marotta/trabajo-uy.git"
+            link: "https://github.com/pablomarotta4/TrabajoUY"
         },
         {
             title : "Portfolio utilizando HTML, CSS y JavaScript",
