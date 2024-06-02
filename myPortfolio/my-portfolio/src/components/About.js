@@ -17,7 +17,7 @@ export function About() {
                     <Container className='skill-item'>
                     <img src="https://cdn-icons-png.flaticon.com/128/8016/8016946.png" alt="html" width="30px" height="30px" />
                     <h2 className='skill-title'>Desarrollador</h2>
-                    <p className="skill-sub-title">Apasionado desarrollador con habilidades técnicas sólidas y un enfoque creativo para resolver problemas.</p>
+                    <p className="skill-sub-title">Desarrollador con enfoque en soluciones innovadoras y efectivas, siempre buscando mejorar y aprender.</p>
                     <p className='skill-text-title'>Lenguajes:</p>
                     <p className='skill-text'> Java, C+, JavaScript, HTML, CSS, React, mySQL </p>
                     <p className='skill-text-title'>Herramientas:</p>
@@ -28,7 +28,7 @@ export function About() {
                     <Container className='skill-item'>
                     <img src="https://cdn-icons-png.flaticon.com/128/3439/3439472.png" alt="html" width="30px" height="30px" />
                     <h2 className='skill-title'>Soft skills</h2>
-                    <p className="skill-sub-title">Comunicador eficaz y colaborador entusiasta, comprometido con el crecimiento personal y profesional.</p>
+                    <p className="skill-sub-title">Colaborador proactivo y comunicador claro, excelente en trabajo en equipo y resolución de problemas complejos.</p>
                     <p className='skill-text-title'>Habilidades:</p>
                     <p className='skill-text'>Comunicación Efectiva, Trabajo en equipo, Resolución de Problemas, Adaptabilidad y Flexibilidad</p>
 
@@ -38,7 +38,7 @@ export function About() {
                     <Container className='skill-item'>
                     <img src="https://cdn-icons-png.flaticon.com/128/1245/1245112.png" alt="html" width="30px" height="30px" />
                     <h2 className='skill-title'>Formación</h2>
-                    <p className="skill-sub-title">Con base académica en ingeniería en computación, busco aplicar mis conocimientos en entornos desafiantes y en constante evolución.</p>
+                    <p className="skill-sub-title">Estudiante de ingeniería en computación, comprometido con el aprendizaje continuo y la adaptación a nuevas tecnologías.</p>
                     <p className='skill-text-title'>Estudios:</p>
                     <p className='skill-text'>Universidad de la República (UDELAR), SoloLearning.</p>
                     <p className='skill-text-title'>Otros:</p>
