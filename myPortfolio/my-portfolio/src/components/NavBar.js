@@ -48,14 +48,14 @@ export function MainNav() {
                         <div className="social-media">
                             <Row className=''>
                                 <Col>
-                            <a href="https://www.linkedin.com/in/pablo-marotta/" target="_blank" rel="noreferrer">
-                                <img className='img-fluid mx-auto d-block' src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="LinkedIn"  width="30px" height="30px"/>
-                            </a>
+                                    <a href="https://www.linkedin.com/in/pablo-marotta/" target="_blank" rel="noreferrer">
+                                        <img className='img-fluid mx-auto d-block' src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="LinkedIn"  width="30px" height="30px"/>
+                                    </a>
                                 </Col>
                                 <Col>
-                            <a href="https://www.instagram.com/pablomarotta2/" target="_blank" rel="noreferrer">
-                                <img className='img-fluid mx-auto d-block' src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram"  width="30px" height="30px"/>
-                            </a>
+                                    <a href="https://github.com/pablomarotta4" target="_blank" rel="noreferrer">
+                                        <img className='img-fluid mx-auto d-block' src="https://cdn-icons-png.flaticon.com/128/25/25657.png" alt="Github"  width="30px" height="30px"/>
+                                    </a>
                                 </Col>
                             </Row>
                         </div>
