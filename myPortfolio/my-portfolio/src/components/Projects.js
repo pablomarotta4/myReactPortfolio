@@ -8,7 +8,7 @@ export function Projects() {
     const myProjects = [
         {
             title: "TrabajoUY",
-            description: "TrabajoUY es una plataforma de búsqueda de empleo que conecta a empresas con candidatos. La plataforma permite a los usuarios buscar empleo, postularse a ofertas laborales y a las empresas publicar ofertas de trabajo.",
+            description: "TrabajoUY es una plataforma de búsqueda de empleo que conecta a empresas con candidatos. La plataforma permite a los usuarios buscar empleo, postularse a ofertas laborales y a las empresas publicar ofertas de trabajo. Este proyecto fue desarrollado para el curso de Taller de Programación de la Facultad de Ingeniería de la Universidad de la República.",
             tech: ["Java", "Servlets", "Web Services", "HTML", "CSS", "Meaven", "JSP"],
             img: process.env.PUBLIC_URL + "/trabajoUy.png",           
             link: "https://github.com/pablomarotta4/TrabajoUY"
@@ -19,7 +19,15 @@ export function Projects() {
             tech : ["HTML", "CSS", "JavaScript"],
             img: process.env.PUBLIC_URL + "/portfolio.png",
             link : "https://pablomarotta4.github.io/jsPortfolio/"
+        },
+        {
+            title : "App de clases de idiomas",
+            description : "Proyecto de clases de idiomas que permite a los usuarios registrarse, loguearse, ver los profesores disponibles y reservar clases, entre otras funcionalidades. Este proyecto fue desarrollado para el curso de Programación 4 de la Facultad de Ingeniería de la Universidad de la República.",
+            tech : ["C++"],
+            img: process.env.PUBLIC_URL + "/idiomas.png",
+            link : "https://github.com/pablomarotta4/LABP4"
         }
+
     ];
 
 
