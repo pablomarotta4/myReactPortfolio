@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Carousel from 'react-bootstrap/Carousel';
 import { ProjectItem } from './ProjectItem';
 
 export function Projects() {
@@ -27,34 +28,41 @@ export function Projects() {
             img: process.env.PUBLIC_URL + "/idiomas.png",
             link : "https://github.com/pablomarotta4/LABP4"
         }
-
     ];
 
-
     return (
-    <section id="projects" className='projects'>
-    <Container className='projects'>
-    <Row>
-        <Col className='projects-intro'>
-            <div className='projects-title'>
-                <h1>Proyectos</h1>
-            </div>
-            <div className='projects-text'>
-                <p>Estos son algunos de los proyectos en los que he trabajado. </p>
-            </div>
-        </Col>
-    </Row>
-    <Row>
-       <Col>
-            {myProjects.map((project,index) => (
+        <section id="projects" className='projects'>
+            <Container className='projects'>
                 <Row>
-                <ProjectItem key={index} title={project.title} description={project.description} tech={project.tech} img={project.img} link={project.link} />
+                    <Col className='projects-intro'>
+                        <div className='projects-title'>
+                            <h1>Proyectos</h1>
+                        </div>
+                        <div className='projects-text'>
+                            <p>Estos son algunos de los proyectos en los que he trabajado. </p>
+                        </div>
+                    </Col>
                 </Row>
-            ))}
-       </Col>
-    </Row>
-    </Container>
-    </section>
+                <Row>
+                    <Col>
+                        <Carousel>
+                            {myProjects.map((project, index) => (
+                                <Carousel.Item key={index}>
+                                    
+                                    <ProjectItem 
+                                        title={project.title} 
+                                        description={project.description} 
+                                        tech={project.tech} 
+                                        img={project.img} 
+                                        link={project.link} 
+                                    />
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
     );
 }
 
