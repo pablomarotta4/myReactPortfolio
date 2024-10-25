@@ -27,6 +27,13 @@ export function Projects() {
             tech : ["C++"],
             img: process.env.PUBLIC_URL + "/idiomas.png",
             link : "https://github.com/pablomarotta4/LABP4"
+        },
+        {
+            title : "Twitte copycat",
+            description : "Copycat de Twitter realizado mediante tecnologias cross-plataform.",
+            tech : ["Firebase", "Flutter"],
+            img: process.env.PUBLIC_URL + "/Twitter.png",
+            link : "https://github.com/pablomarotta4/smartUpChallenge"
         }
     ];
 
