@@ -53,6 +53,14 @@ body{
   font-family: "Varela Round", sans-serif;
 }
 
+.divider {
+  height: 4px; /* Altura del divisor */
+  background-color: #cccccc; /* Color del divisor */
+  margin: 2rem 0; /* Espacio superior e inferior */
+  border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+}
+
+
 .horizontal-bar {
     width: 100%;
     height: 375px;
@@ -155,6 +163,15 @@ nav.navbar .navbar-toggler{
   padding: 100px 50px 100px 50px;
 }
 
+.banner-name{
+  margin-bottom: 0.5rem;
+}
+
+.wrap{
+  margin-bottom: 2rem;
+  height: 1.5rem;
+}
+
 .banner h1{
   font-size: 4em;
 }
@@ -165,9 +182,15 @@ nav.navbar .navbar-toggler{
   font-weight: 500;
 }
 
-.word-changer{
-  height: 20px;
+.profile-pic {
+  width: 100%;             
+  max-width: 700px;        
+  height: auto;           
+  border-radius: 50%;      
+  object-fit: cover;       
+  margin: 0 auto;         
 }
+
 
 /* About */
 .about{
@@ -261,54 +284,231 @@ nav.navbar .navbar-toggler{
   font-weight: 500;
 }
 
-.projects{
-  background-color: #ffffff;
-  width: 100%;
-  padding: 50px 0;
-  height: auto;
-
-}
-
-.projects-intro{
-  align-items: top;
-  
-}
-
-.project{
-  display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  align-items: top;
-  border-radius: 6px;
-  padding: 20px 20px 20px 20px;
-  margin-top: 20px;
-  transition: all 0.32s ease-in-out;
-  width: 100%;
-  height: 70%;
-
-}
-
-
-.projects-title{
+/* Tecnologias */
+/* Sección general de tecnologías */
+.technologies-section {
+  padding: 3rem 1rem;
   text-align: center;
-  font-size: 2.5em;
-  font-weight: 700;
-  font-family: "Segoe UI", sans-serif;
-  color: #141c3a;
+  background-color: #ffffff; /* Fondo claro */
 }
 
-.projects-text{
-  text-align: center;
-  font-size: 1.4em;
-  font-weight: 500;
-  margin: 35px 0;
-  font-family: "Segoe UI", sans-serif;
-  color: #141c3a;
+.technologies-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+/* Grid de tecnologías */
+.technologies-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Espacio entre los íconos */
+  flex-wrap: wrap; /* Ajusta los íconos para que quepan en varias líneas si es necesario */
+}
+
+/* Estilo de cada ícono de tecnología */
+.technology-item {
+  background-color: #f8f8f8; /* Fondo claro para cada tarjeta */
+  border-radius: 16px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+/* Estilo de los logos */
+.technology-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* Asegura que el logo se vea completo */
 }
 
 
-.project-title{
+/* Estilo general de la sección de proyectos */
+.projects-section {
+  padding: 2rem 0;
+}
+
+/* Título y texto de introducción */
+.projects-intro h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.projects-intro p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Grid para las tarjetas de los proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+/* Estilo de la tarjeta */
+.project-card {
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 12px; /* Bordes redondeados */
+  border: 1px solid #e0e0e0; /* Borde sutil */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+.project-card:hover {
+  transform: translateY(-8px); /* Eleva la tarjeta al pasar el mouse */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+}
+
+/* Imagen de la tarjeta */
+.project-image {
+  height: 200px; /* Altura fija para mantener uniformidad */
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  border-top-left-radius: 12px; /* Bordes redondeados superiores */
+  border-top-right-radius: 12px; /* Bordes redondeados superiores */
+}
+
+/* Contenido de la tarjeta */
+.project-content {
+  padding: 20px; /* Espaciado interno */
+  text-align: left; /* Alineación a la izquierda */
+}
+
+.project-content h5 {
+  font-size: 1.25rem; /* Tamaño del título */
+  font-weight: 600; /* Grosor del título */
+  margin-bottom: 10px; /* Espaciado debajo del título */
+  color: #333333; /* Color oscuro para buen contraste con fondo blanco */
+}
+
+.project-content p {
+  font-size: 0.9rem; /* Tamaño de la fuente para la descripción */
+  color: #666666; /* Color gris para que no sea demasiado prominente */
+  line-height: 1.5; /* Mejora la legibilidad */
+}
+
+/* Enlace al proyecto como un botón */
+.project-content a {
+  display: inline-block; /* Para que se vea como un botón */
+  padding: 10px 20px; /* Espaciado para el enlace */
+  background-color: #007bff; /* Fondo azul */
+  color: #ffffff; /* Texto blanco */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Grosor del texto */
+  transition: background-color 0.3s ease; /* Animación de color en hover */
+  margin-top: 1rem; /* Espaciado superior */
+}
+
+.project-content a:hover {
+  background-color: #0056b3; /* Color más oscuro en hover */
+}
+
+
+.project-img-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: auto; 
+}
+
+
+.project-card {
+  background-color: #ffffff; 
+  color: #333333; 
+  border-radius: 12px; 
+  border: 1px solid #e0e0e0; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  position: relative; 
+  width: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
+}
+
+
+.project-image {
+  height: 200px;
+  background-size: cover; 
+  background-position: center; 
+  position: relative;
+}
+
+.project-overlay {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1; 
+}
+
+
+.project-link {
+  color: #ffffff; 
+  font-size: 2rem; 
+  text-decoration: none; 
+  transition: transform 0.3s ease; 
+}
+
+.project-link:hover {
+  transform: scale(1.1); 
+}
+
+.project-content {
+  padding: 20px; 
+  text-align: left; 
+}
+
+.project-content h5 {
+  font-size: 1.25rem;
+  font-weight: 600; 
+  margin-bottom: 10px; 
+  color: #333333; 
+}
+
+.project-content p {
+  font-size: 1rem; /* Tamaño de la fuente para la descripción */
+  color: #666666; /* Color gris para que no sea demasiado prominente */
+  line-height: 1.5; /* Mejora la legibilidad */
+}
+
+
+.project-content a:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+
+.project-img {
+  max-width: 100%;
+  max-height: 200px; 
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.project-title {
   text-align: center;
   font-size: 2em;
   font-weight: 700;
@@ -317,21 +517,24 @@ nav.navbar .navbar-toggler{
   padding: 2%;
 }
 
-.project-img-container {
+.project-description {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+  color: #141c3a;
+  overflow: hidden; 
+}
+
+.project-about ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
-  height: 100%; /* Asegura que el contenedor tenga suficiente altura */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-
-.project-img {
-  max-width: 100%; /* Se ajusta al tamaño del contenedor */
-  max-height: 300px; /* Limita la altura máxima de la imagen para evitar que sea demasiado grande */
-  height: auto; /* Mantiene la proporción de la imagen */
-  width: auto; /* Asegura que la imagen mantenga la proporción correcta */
-  object-fit: contain; /* Ajusta la imagen para que se mantenga dentro del contenedor sin recortar */
-}
-
 
 .project-tech{
   text-align: center;
@@ -358,22 +561,36 @@ nav.navbar .navbar-toggler{
   visibility: visible;
 }
 
-.project-about ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" fill%3D"%23ffffff" viewBox%3D"0 0 8 8"%3E%3Cpath d%3D"M4.5 0l-4 4 4 4v-3h3v-2h-3v-3z"%3E%3C/path%3E%3C/svg%3E');
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  height: 50px; /* Tamaño fijo para las flechas */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad para un mejor contraste */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
-.project-description{
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 500;
-  font-family: "Segoe UI", sans-serif;
-  color: #141c3a;
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1; 
 }
 
 /* Contact */
@@ -490,41 +707,6 @@ nav.navbar .navbar-toggler{
   color: white;
 
 }
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D"http://www.w3.org/2000/svg" fill%3D"%23ffffff" viewBox%3D"0 0 8 8"%3E%3Cpath d%3D"M4.5 0l-4 4 4 4v-3h3v-2h-3v-3z"%3E%3C/path%3E%3C/svg%3E');
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.5); 
-  border-radius: 50%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  height: 50px; /* Tamaño fijo para las flechas */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad para un mejor contraste */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.8); 
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 1; 
-}
-
-
-
 
 .App {
   text-align: center;
@@ -678,8 +860,8 @@ nav.navbar .navbar-toggler{
 
 @media (max-width: 580px){
     .project-img{
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
     }
 
     .project-title{
@@ -687,12 +869,9 @@ nav.navbar .navbar-toggler{
     }
 
     .project-description{
-      font-size: 0.8em;
+      font-size: 1em;
     }
 
-    .projects-intro{
-      margin-top: 50px;
-    }
 
 }
 

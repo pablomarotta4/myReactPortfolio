@@ -1,5 +1,6 @@
-import { Container , Row , Col} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion'; // Importa Framer Motion
 
 export function Banner() {
     const [loop, setLoop] = useState(0);
@@ -13,7 +14,7 @@ export function Banner() {
         let ticker = setInterval(() => {
             tick();
         }, delta);
-        return () => { clearInterval(ticker)};
+        return () => { clearInterval(ticker) };
     }, [word]);
 
     const tick = () => {
@@ -22,36 +23,50 @@ export function Banner() {
         let updateWord = erased ? fullText.substring(0, word.length - 1) : fullText.substring(0, word.length + 1);
 
         setWord(updateWord);
-        if(erased){
-            setDelta(prevDelta => prevDelta/2);
+        if (erased) {
+            setDelta(prevDelta => prevDelta / 2);
         }
-        if(!erased && updateWord === fullText){
+        if (!erased && updateWord === fullText) {
             setDelta(period);
             setErased(true);
-        }
-        else if(erased && updateWord === ''){
+        } else if (erased && updateWord === '') {
             setErased(false);
             setLoop(loop + 1);
-            setDelta(500)
+            setDelta(500);
         }
     }
 
-
     return (
         <Container className="banner align-items-center">
-            <Row className='align-items-center'>
-                <Col className=" text-center align-items-center">
-                    <h1>Pablo Marotta</h1>
-                    <h2 className='wrap word-changer'>{word}</h2>
-                    <p> Explorando posibilidades infinitas, una línea de código a la vez.</p>
+            <Row className="align-items-center">
+                <Col md={4} className="text-center">
+                    <motion.img
+                        src={process.env.PUBLIC_URL + "/micaricatura.png"}
+                        alt="Pablo Marotta"
+                        className="profile-pic"
+                        initial={{ opacity: 0, y: 50 }} 
+                        animate={{
+                            opacity: 1,
+                            y: 0,
+                            transition: { duration: 1 }, 
+                        }}
+                        transition={{
+                            y: {
+                                duration: 2,
+                                yoyo: Infinity, 
+                                ease: "easeInOut"
+                            }
+                        }}
+                    />
                 </Col>
-            </Row>
-            <Row>
-            <Col class="align-items-bottom">
-                <img src="https://cdn-icons-png.flaticon.com/128/1688/1688400.png" alt="Pablo Marotta" />
-            </Col>
+                <Col md={8} className="text-left">
+                    <h1 className="banner-name">Pablo Marotta</h1>
+                    <h2 className='wrap'>{word}</h2>
+                    <p className="banner-description">Explorando posibilidades infinitas, una línea de código a la vez. Apasionado por diseñar soluciones eficientes y creativas que conectan ideas y tecnología para transformar experiencias digitales</p>
+                </Col>
             </Row>
         </Container>
     );
 }
+
 export default Banner;

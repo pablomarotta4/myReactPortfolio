@@ -1,13 +1,15 @@
 import './App.css';
-import MainNav from './components/NavBar'; // Importa NavBar y asignalo a una variable
-import Banner from './components/Banner'; // Importa Banner y asignalo a una variable
-import About from './components/About'; // Importa About y asignalo a una variable
-import Projects from './components/Projects'; // Importa Projects y asignalo a una variable
-import Contact from './components/Contact'; // Importa Contact y asignalo a una variable
-import Footer from './components/Footer'; // Importa Footer y asignalo a una variable
-import Cv from './components/Cv'; // Importa Cv y asignalo a una variable
+import MainNav from './components/NavBar'; 
+import Banner from './components/Banner'; 
+import About from './components/About'; 
+import Projects from './components/Projects'; 
+import Contact from './components/Contact'; 
+import Footer from './components/Footer'; 
+import Cv from './components/Cv'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
+import Technologies from './components/Technologies';
+import Divider from './components/Divider';
 
 const App = () => {
   useEffect(() => {
@@ -21,9 +23,11 @@ const App = () => {
     <div className='App'>
       <MainNav/>
       <Banner/>
-      <About/>
-      <Cv/>
       <Projects/>
+      <Divider />
+      <Technologies/>
+      <Divider />
+      <Cv/>
       <Contact/>
       <Footer/>
     </div>

@@ -11,7 +11,7 @@ export function About() {
                         </p>
                     </div>
                 </Container>  
-            <Container className='about-middle-section'>
+            {/* <Container className='about-middle-section'>
             <Row className='box'>
                 <Col>
                     <Container className='skill-item'>
@@ -46,7 +46,7 @@ export function About() {
                     </Container>
                 </Col>
             </Row>
-        </Container>
+        </Container> */}
                 
         </div>
     );
