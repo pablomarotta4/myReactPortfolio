@@ -15,7 +15,7 @@ const wheel = (y) => {
 
 const Cv = () => {
     const redirectToCV = () => {
-        window.open('https://drive.google.com/file/d/16dXc99dTVv31wKPxzr3Gyh47_Nvftwcv/view?usp=drive_link', '_blank');
+        window.open('https://drive.google.com/file/d/1YKznv5kAn6GqEydD2RWLUnU4LnTdu45N/view?usp=sharing', '_blank');
     };
 
     useEffect(() => {
