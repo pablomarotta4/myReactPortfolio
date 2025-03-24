@@ -4,6 +4,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { motion } from 'framer-motion'; // Importar Framer Motion
 import ProjectCard from './ProjectCard'; 
+import Slider from 'react-slick'; // Importar react-slick
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Arrow from './Arrow'; // Importar el componente Arrow
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export function Projects() {
     const myProjects = [
@@ -37,6 +43,34 @@ export function Projects() {
         }
     ];
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: <Arrow icon={<FontAwesomeIcon icon={faChevronRight} />} />,
+        prevArrow: <Arrow icon={<FontAwesomeIcon icon={faChevronLeft} />} />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
     return (
         <section id="projects" className="projects">
             <Container>
@@ -51,29 +85,33 @@ export function Projects() {
                     </Col>
                 </Row>
                 <Row>
-                    {myProjects.map((project, index) => (
-                        <Col key={index} md={6} lg={4} className="mb-4">
-                            <motion.div
-                                whileHover={{ scale: 1.05 }} 
-                                whileTap={{ scale: 0.95 }} 
-                                initial={{ opacity: 0, y: 50 }} 
-                                animate={{ opacity: 1, y: 0 }} 
-                                transition={{
-                                    duration: 0.5,
-                                    delay: index * 0.1, 
-                                    ease: "easeOut"
-                                }}
-                            >
-                                <ProjectCard
-                                    title={project.title}
-                                    description={project.description}
-                                    tech={project.tech}
-                                    imgUrl={project.img}
-                                    link={project.link}
-                                />
-                            </motion.div>
-                        </Col>
-                    ))}
+                    <Col>
+                        <Slider {...settings}>
+                            {myProjects.map((project, index) => (
+                                <div key={index}>
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }} 
+                                        whileTap={{ scale: 0.95 }} 
+                                        initial={{ opacity: 0, y: 50 }} 
+                                        animate={{ opacity: 1, y: 0 }} 
+                                        transition={{
+                                            duration: 0.5,
+                                            delay: index * 0.1, 
+                                            ease: "easeOut"
+                                        }}
+                                    >
+                                        <ProjectCard
+                                            title={project.title}
+                                            description={project.description}
+                                            tech={project.tech}
+                                            imgUrl={project.img}
+                                            link={project.link}
+                                        />
+                                    </motion.div>
+                                </div>
+                            ))}
+                        </Slider>
+                    </Col>
                 </Row>
             </Container>
         </section>

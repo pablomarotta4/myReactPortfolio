@@ -334,6 +334,25 @@ nav.navbar .navbar-toggler{
   padding: 2rem 0;
 }
 
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 40px;
+  color: black;
+}
+
+.slick-prev {
+  left: -50px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.slick-next {
+  right: -50px; /* Ajusta la posición de la flecha derecha */
+}
+
 /* Título y texto de introducción */
 .projects-intro h1 {
   font-size: 2.5rem;
@@ -870,6 +889,35 @@ nav.navbar .navbar-toggler{
 
     .project-description{
       font-size: 1em;
+    }
+
+    @media (max-width: 1024px) {
+      .slick-prev {
+        left: -30px; /* Ajusta la posición de la flecha izquierda */
+      }
+    
+      .slick-next {
+        right: -30px; /* Ajusta la posición de la flecha derecha */
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .slick-prev, .slick-next {
+        width: 30px;
+        height: 30px;
+      }
+    
+      .slick-prev:before, .slick-next:before {
+        font-size: 30px;
+      }
+    
+      .slick-prev {
+        left: -20px; /* Ajusta la posición de la flecha izquierda */
+      }
+    
+      .slick-next {
+        right: -20px; /* Ajusta la posición de la flecha derecha */
+      }
     }
 
 
