@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/myReactPortfolio/static/css/main.f698fcbd.css",
-    "main.js": "/myReactPortfolio/static/js/main.8115fbaa.js",
+    "main.css": "/myReactPortfolio/static/css/main.fee284d6.css",
+    "main.js": "/myReactPortfolio/static/js/main.440a7dcd.js",
     "static/js/592.6647c214.chunk.js": "/myReactPortfolio/static/js/592.6647c214.chunk.js",
     "static/media/RobotoMono-VariableFont_wght.ttf": "/myReactPortfolio/static/media/RobotoMono-VariableFont_wght.e14e25b7c497634efdfe.ttf",
     "static/media/PlusJakartaSans-Italic-VariableFont_wght.ttf": "/myReactPortfolio/static/media/PlusJakartaSans-Italic-VariableFont_wght.8eca6f78230e2b1fc1f5.ttf",
     "static/media/VarelaRound-Regular.ttf": "/myReactPortfolio/static/media/VarelaRound-Regular.e67ccd4a92677fdf8719.ttf",
+    "static/media/slick.svg": "/myReactPortfolio/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/myReactPortfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/myReactPortfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/myReactPortfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/myReactPortfolio/index.html",
-    "main.f698fcbd.css.map": "/myReactPortfolio/static/css/main.f698fcbd.css.map",
-    "main.8115fbaa.js.map": "/myReactPortfolio/static/js/main.8115fbaa.js.map",
+    "main.fee284d6.css.map": "/myReactPortfolio/static/css/main.fee284d6.css.map",
+    "main.440a7dcd.js.map": "/myReactPortfolio/static/js/main.440a7dcd.js.map",
     "592.6647c214.chunk.js.map": "/myReactPortfolio/static/js/592.6647c214.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f698fcbd.css",
-    "static/js/main.8115fbaa.js"
+    "static/css/main.fee284d6.css",
+    "static/js/main.440a7dcd.js"
   ]
 }
