@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/myReactPortfolio/static/css/main.fee284d6.css",
-    "main.js": "/myReactPortfolio/static/js/main.440a7dcd.js",
+    "main.css": "/myReactPortfolio/static/css/main.7838edd6.css",
+    "main.js": "/myReactPortfolio/static/js/main.6a42d487.js",
     "static/js/592.6647c214.chunk.js": "/myReactPortfolio/static/js/592.6647c214.chunk.js",
     "static/media/RobotoMono-VariableFont_wght.ttf": "/myReactPortfolio/static/media/RobotoMono-VariableFont_wght.e14e25b7c497634efdfe.ttf",
     "static/media/PlusJakartaSans-Italic-VariableFont_wght.ttf": "/myReactPortfolio/static/media/PlusJakartaSans-Italic-VariableFont_wght.8eca6f78230e2b1fc1f5.ttf",
@@ -11,12 +11,12 @@
     "static/media/slick.ttf": "/myReactPortfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/myReactPortfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/myReactPortfolio/index.html",
-    "main.fee284d6.css.map": "/myReactPortfolio/static/css/main.fee284d6.css.map",
-    "main.440a7dcd.js.map": "/myReactPortfolio/static/js/main.440a7dcd.js.map",
+    "main.7838edd6.css.map": "/myReactPortfolio/static/css/main.7838edd6.css.map",
+    "main.6a42d487.js.map": "/myReactPortfolio/static/js/main.6a42d487.js.map",
     "592.6647c214.chunk.js.map": "/myReactPortfolio/static/js/592.6647c214.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fee284d6.css",
-    "static/js/main.440a7dcd.js"
+    "static/css/main.7838edd6.css",
+    "static/js/main.6a42d487.js"
   ]
 }
