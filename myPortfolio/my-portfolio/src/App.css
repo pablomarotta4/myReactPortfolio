@@ -1,16 +1,9 @@
 @font-face {
-  font-family: "Varela Round", sans-serif;
-  src: url(./assets/font/VarelaRound-Regular.ttf);
-}
-
-@Font-face{
-  font-family: "Plus Jakarta Sans", sans-serif;
-  src: url(./assets/font/Plus_Jakarta_Sans/PlusJakartaSans-Italic-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Roboto Mono", sans-serif;
-  src: url(./assets/font/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
+  font-family: 'Inter';
+  src: url('./assets/font/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 100 900;      
+  font-style: normal;
+  font-display: swap;
 }
 
 
@@ -50,7 +43,7 @@ body{
   overflow-x: hidden;
   position: relative;
   background-color: white;
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Inter';
 }
 
 .divider {
@@ -345,15 +338,15 @@ nav.navbar .navbar-toggler{
   color: black;
 }
 
-.slick-prev {
-  left: -50px; /* Ajusta la posición de la flecha izquierda */
+.slick-list {
+  margin: 0 -10px;
 }
 
-.slick-next {
-  right: -50px; /* Ajusta la posición de la flecha derecha */
+.slick-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-/* Título y texto de introducción */
 .projects-intro h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -366,7 +359,6 @@ nav.navbar .navbar-toggler{
   margin-top: 0.5rem;
 }
 
-/* Grid para las tarjetas de los proyectos */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -375,11 +367,13 @@ nav.navbar .navbar-toggler{
 
 /* Estilo de la tarjeta */
 .project-card {
-  background-color: #ffffff; /* Fondo blanco */
-  border-radius: 12px; /* Bordes redondeados */
-  border: 1px solid #e0e0e0; /* Borde sutil */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -395,6 +389,31 @@ nav.navbar .navbar-toggler{
   border-top-left-radius: 12px; /* Bordes redondeados superiores */
   border-top-right-radius: 12px; /* Bordes redondeados superiores */
 }
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+
+.tag {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tag:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
 
 /* Contenido de la tarjeta */
 .project-content {
@@ -429,15 +448,41 @@ nav.navbar .navbar-toggler{
 }
 
 .project-content a:hover {
-  background-color: #0056b3; /* Color más oscuro en hover */
+  background-color: #0056b3;
 }
 
 
 .project-img-container {
+  width: 100%;
+  height: 200px;              
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: relative;
+  background: #fff;
+}
+
+.project-img-container .project-image {
+  width: 100%;
+  height: 100%;                
+  background-size: contain;   
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.project-img-container .project-overlay {
+  position: absolute;
+  inset: 0;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: auto; 
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.project-card:hover .project-img-container .project-overlay {
+  opacity: 1;
 }
 
 
@@ -459,27 +504,6 @@ nav.navbar .navbar-toggler{
 }
 
 
-.project-image {
-  height: 200px;
-  background-size: cover; 
-  background-position: center; 
-  position: relative;
-}
-
-.project-overlay {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease; 
-}
-
 .project-card:hover .project-overlay {
   opacity: 1; 
 }
@@ -499,6 +523,7 @@ nav.navbar .navbar-toggler{
 .project-content {
   padding: 20px; 
   text-align: left; 
+  height: 150px; 
 }
 
 .project-content h5 {
@@ -506,6 +531,7 @@ nav.navbar .navbar-toggler{
   font-weight: 600; 
   margin-bottom: 10px; 
   color: #333333; 
+  text-align: center;
 }
 
 .project-content p {
@@ -517,14 +543,6 @@ nav.navbar .navbar-toggler{
 
 .project-content a:hover {
   background-color: #0056b3; /* Color más oscuro al pasar el mouse */
-}
-
-
-.project-img {
-  max-width: 100%;
-  max-height: 200px; 
-  object-fit: contain;
-  margin-bottom: 10px;
 }
 
 .project-title {

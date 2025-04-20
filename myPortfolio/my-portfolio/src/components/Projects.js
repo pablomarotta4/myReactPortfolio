@@ -2,55 +2,57 @@ import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { motion } from 'framer-motion'; // Importar Framer Motion
+import { motion } from 'framer-motion'; 
 import ProjectCard from './ProjectCard'; 
-import Slider from 'react-slick'; // Importar react-slick
+import Slider from 'react-slick'; 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Arrow from './Arrow'; // Importar el componente Arrow
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export function Projects() {
     const myProjects = [
         {
-            title: "TrabajoUY",
-            description: "TrabajoUY es una plataforma de búsqueda de empleo que conecta a empresas con candidatos. La plataforma permite a los usuarios buscar empleo, postularse a ofertas laborales y a las empresas publicar ofertas de trabajo. Este proyecto fue desarrollado para el curso de Taller de Programación de la Facultad de Ingeniería de la Universidad de la República.",
-            tech: ["Java", "Servlets", "Web Services", "HTML", "CSS", "Meaven", "JSP"],
-            img: process.env.PUBLIC_URL + "/trabajoUy.png",
-            link: "https://github.com/pablomarotta4/TrabajoUY"
+          title: "TrabajoUY",
+          description: "Plataforma para buscar y publicar ofertas de empleo. Proyecto académico de la Facultad de Ingeniería (UdelaR).",
+          tech: ["Java", "Servlets", "Web Services", "HTML", "CSS", "Maven", "JSP"],
+          img: process.env.PUBLIC_URL + "/trabajoUy.png",
+          link: "https://github.com/pablomarotta4/TrabajoUY"
         },
         {
-            title: "Portfolio utilizando HTML, CSS y JavaScript",
-            description: "Este es mi portfolio personal. El mismo fue desarrollado utilizando HTML, CSS y JavaScript para el curso de desarrollador web de IBM.",
-            tech: ["HTML", "CSS", "JavaScript"],
-            img: process.env.PUBLIC_URL + "/portfolio.png",
-            link: "https://pablomarotta4.github.io/jsPortfolio/"
+          title: "Portfolio Web",
+          description: "Mi portfolio personal, creado con HTML, CSS y JavaScript durante el curso de IBM.",
+          tech: ["HTML", "CSS", "JavaScript"],
+          img: process.env.PUBLIC_URL + "/portfolio.png",
+          link: "https://pablomarotta4.github.io/jsPortfolio/"
         },
         {
-            title: "App de clases de idiomas",
-            description: "Proyecto de clases de idiomas que permite a los usuarios registrarse, loguearse, ver los profesores disponibles y reservar clases, entre otras funcionalidades. Este proyecto fue desarrollado para el curso de Programación 4 de la Facultad de Ingeniería de la Universidad de la República.",
-            tech: ["C++"],
-            img: process.env.PUBLIC_URL + "/idiomas.png",
-            link: "https://github.com/pablomarotta4/LABP4"
+          title: "App de Idiomas",
+          description: "App para registrarse y reservar clases de idiomas. Proyecto académico de la UdelaR.",
+          tech: ["C++"],
+          img: process.env.PUBLIC_URL + "/idiomas.png",
+          link: "https://github.com/pablomarotta4/LABP4"
         },
         {
-            title: "Twitter copycat",
-            description: "Copycat de Twitter realizado mediante tecnologias cross-plataform.",
-            tech: ["Firebase", "Flutter"],
-            img: process.env.PUBLIC_URL + "/twcopycat.png",
-            link: "https://github.com/pablomarotta4/smartUpChallenge"
-        }
-    ];
-
+          title: "Twitter Clone",
+          description: "Clon de Twitter construido con Flutter y Firebase.",
+          tech: ["Flutter", "Firebase"],
+          img: process.env.PUBLIC_URL + "/twcopycat.png",
+          link: "https://github.com/pablomarotta4/smartUpChallenge"
+        },
+        {
+            title: "Concesionario Virtual",
+            description: "Sistema completo para gestión de vehículos, consultas, autenticación con JWT y chatbot con IA.",
+            tech: ["FastAPI", "Python", "MongoDB", "JWT", "React", "TypeScript", "Tailwind", "IA"],
+            img: process.env.PUBLIC_URL + "/concesionario.jpg", 
+            link: "https://github.com/pablomarotta4/Concesionario" 
+          }
+      ];
+      
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        nextArrow: <Arrow icon={<FontAwesomeIcon icon={faChevronRight} />} />,
-        prevArrow: <Arrow icon={<FontAwesomeIcon icon={faChevronLeft} />} />,
         responsive: [
             {
                 breakpoint: 1024,

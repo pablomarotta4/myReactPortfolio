@@ -11,6 +11,7 @@ export function Technologies() {
         { name: "C/C++", logo: process.env.PUBLIC_URL + "/c.png", duration: 3.1, delay: 0.5 },
         { name: "Java", logo: process.env.PUBLIC_URL + "/java.png", duration: 2.9, delay: 0.6 },
         { name: "Flutter", logo: process.env.PUBLIC_URL + "/flutter.png", duration: 2.7, delay: 0.7 },
+        { name: "Python", logo: process.env.PUBLIC_URL + "/python.png", duration: 2.8, delay: 0.8 },
     ];
 
     return (
