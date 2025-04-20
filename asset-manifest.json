@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myReactPortfolio/static/css/main.fd5ed086.css",
-    "main.js": "/myReactPortfolio/static/js/main.3aa6a2a5.js",
+    "main.js": "/myReactPortfolio/static/js/main.d85365f7.js",
     "static/js/592.6647c214.chunk.js": "/myReactPortfolio/static/js/592.6647c214.chunk.js",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/myReactPortfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/slick.svg": "/myReactPortfolio/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.woff": "/myReactPortfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/myReactPortfolio/index.html",
     "main.fd5ed086.css.map": "/myReactPortfolio/static/css/main.fd5ed086.css.map",
-    "main.3aa6a2a5.js.map": "/myReactPortfolio/static/js/main.3aa6a2a5.js.map",
+    "main.d85365f7.js.map": "/myReactPortfolio/static/js/main.d85365f7.js.map",
     "592.6647c214.chunk.js.map": "/myReactPortfolio/static/js/592.6647c214.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd5ed086.css",
-    "static/js/main.3aa6a2a5.js"
+    "static/js/main.d85365f7.js"
   ]
 }
