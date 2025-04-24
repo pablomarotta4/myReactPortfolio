@@ -1,49 +1,114 @@
+/* Importación de fuentes */
 @font-face {
   font-family: 'Inter';
-  src: url('./assets/font/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+  src: url('./assets/font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;      
   font-style: normal;
   font-display: swap;
 }
 
-
-:root {
-  --night-rider: #332e2e;
-  --seashell: #fff7f3;
-  --pig-pink: #ffd3f3;
-  --clear-day: #e3fff8;
-  --tea-green: #d8ffb6; 
-  --shalimar: #f7f8ac;
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/font/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;      
+  font-style: italic;
+  font-display: swap;
 }
 
-*{
+/* Variables globales */
+:root {
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --color-primary: #6E07F3;
+  --color-text: #141c3a;
+  --color-bg: #ffffff;
+}
+
+/* Estilos base */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
-  background-color: #ffffff;
   font-size: 16px;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  min-width: 300px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
 
-body{
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Banner */
+.banner {
+  padding: 100px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-name {
+  font-size: 4em;
+  margin-bottom: 0.5rem;
+}
+
+.banner-description {
+  font-family: var(--font-primary);
+  font-size: 1.5em;
   font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
-  background-color: white;
-  font-family: 'Inter';
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.wrap {
+  margin-bottom: 2rem;
+  height: 1.5rem;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .banner-name {
+    font-size: 3em;
+  }
+
+  .banner-description {
+    font-size: 1.2em;
+  }
+
+  .banner {
+    padding: 50px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-name {
+    font-size: 2.5em;
+  }
+
+  .banner-description {
+    font-size: 1em;
+  }
 }
 
 .divider {
@@ -52,7 +117,6 @@ body{
   margin: 2rem 0; /* Espacio superior e inferior */
   border-radius: 8px; /* Bordes redondeados para un estilo más suave */
 }
-
 
 .horizontal-bar {
     width: 100%;
@@ -66,25 +130,16 @@ body{
     display: flex;
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-weight: 700;
-  font-family: "Varela Round", sans-serif;
+nav.navbar {
+  background-color: white !important;
+  padding: 18px 0;  
+  transition: background-color 0.32s ease-in-out, box-shadow 0.32s ease-in-out;
 }
 
-
-/* Barra de navegación */
-nav.navbar{
-  background-color: white !important;
+nav.navbar.scroll {
+  background-color: rgba(244,241,241,0.53) !important;
   padding: 18px 0;
-  position: relative;
-  width: 100%;
-  z-index: 9999;
-  transition: all 0.32s ease-in-out;
-} 
-
-nav.navbar.scroll{
-  background-color: #f4f1f186 !important;
-  padding: 0px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);   
 }
 
 /* Logo */
@@ -103,12 +158,10 @@ nav.navbar .navbar-nav .nav-link.navbar-link{
   opacity: 0.7;
 }
 
-
 nav.navbar .navbar-nav .nav-link.navbar-link:hover{
   color: #000000 !important;
   opacity: 1;
 }
-
 
 nav.navbar .navbar-toggler{
   border: none;
@@ -146,44 +199,6 @@ nav.navbar .navbar-toggler{
   transform: scale(1.6); /* Ajusta el factor de escala según sea necesario */
   transition: transform 0.3s ease; /* Agrega una transición suave */
 }
-
-
-/* Banner */
-.banner{
-  margin-top: 0;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 50px 100px 50px;
-}
-
-.banner-name{
-  margin-bottom: 0.5rem;
-}
-
-.wrap{
-  margin-bottom: 2rem;
-  height: 1.5rem;
-}
-
-.banner h1{
-  font-size: 4em;
-}
-
-.banner p{
-  font-size: 1.5em;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-.profile-pic {
-  width: 100%;             
-  max-width: 700px;        
-  height: auto;           
-  border-radius: 50%;      
-  object-fit: cover;       
-  margin: 0 auto;         
-}
-
 
 /* About */
 .about{
@@ -243,7 +258,7 @@ nav.navbar .navbar-toggler{
   text-align: center;
   font-size: 24px;
   font-weight: 700;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   text-align: center;
   
 }
@@ -251,7 +266,7 @@ nav.navbar .navbar-toggler{
 .skill-sub-title{
   font-size: 18px;
   color: #141c3a;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   text-align: center;
   font-weight: 500;
   
@@ -260,7 +275,7 @@ nav.navbar .navbar-toggler{
 .skill-text-title{
   font-size: 18px;
   color: #6E07F3;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   text-align: center;
   font-weight: 500;
 
@@ -273,7 +288,7 @@ nav.navbar .navbar-toggler{
   letter-spacing: 0;
   line-height: 150%;
   color: #000000;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 500;
 }
 
@@ -549,7 +564,7 @@ nav.navbar .navbar-toggler{
   text-align: center;
   font-size: 2em;
   font-weight: 700;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   color: #141c3a;
   padding: 2%;
 }
@@ -558,7 +573,7 @@ nav.navbar .navbar-toggler{
   text-align: center;
   font-size: 1.2em;
   font-weight: 500;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   color: #141c3a;
   overflow: hidden; 
 }
@@ -590,7 +605,7 @@ nav.navbar .navbar-toggler{
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgba(114, 124, 238, var(--tw-text-opacity));
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   font-size: 0,64em;
 }
 
@@ -660,14 +675,14 @@ nav.navbar .navbar-toggler{
 .section-title-text{
   font-size: 2.5em;
   font-weight: 700;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   color: #141c3a;
 }
 
 .contact-info{
   font-size: 1.2em;
   font-weight: 500;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
 }
 
 .form-row{
@@ -702,7 +717,7 @@ nav.navbar .navbar-toggler{
   padding: 10px 10px 10px 10px;
   border-radius: 6px;
   font-size: 1em;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 500;
   color: #141c3a;
 
@@ -714,7 +729,7 @@ nav.navbar .navbar-toggler{
   border-radius: 6px;
   border: 1px solid #E6ECF8;
   font-size: 1em;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 500;
   color: #141c3a;
 
@@ -726,7 +741,7 @@ nav.navbar .navbar-toggler{
   border-radius: 6px;
   border: 1px solid #E6ECF8;
   font-size: 1em;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 500;
   color: #141c3a;
   background-color: #6E07F3;
@@ -810,7 +825,7 @@ nav.navbar .navbar-toggler{
   padding: 20px;
   font-size: 1.5em;
   font-weight: 700;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-primary);
 }
 
 .cv-card-body img {
@@ -939,5 +954,54 @@ nav.navbar .navbar-toggler{
     }
 
 
+}
+
+/* Asegurarse de que la fuente se aplique con diferentes pesos */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900; /* Extra bold para que sea muy notorio */
+}
+
+.project-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  color: #141c3a;
+  padding: 2%;
+}
+
+.project-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; /* Regular weight */
+  font-size: 1.2em;
+  color: #141c3a;
+  overflow: hidden; 
+}
+
+/* Test específico para verificar la fuente */
+.App {
+  font-family: var(--font-primary) !important;
+}
+
+body {
+  font-family: var(--font-primary) !important;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary) !important;
+  font-weight: 700;
+}
+
+.banner-description {
+  font-family: var(--font-primary) !important;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #141c3a;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
