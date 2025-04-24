@@ -11,18 +11,21 @@ import { useEffect } from 'react';
 import Technologies from './components/Technologies';
 import Divider from './components/Divider';
 
+
 const App = () => {
+
   useEffect(() => {
     fetch("/api")
     .then((res) => res.json())
     .then((data) => console.log(data.message));
-  }
-  , []);
+  }, []);
 
   return (
     <div className='App'>
       <MainNav/>
       <Banner/>
+      <About/>
+      <Divider />
       <Projects/>
       <Divider />
       <Technologies/>

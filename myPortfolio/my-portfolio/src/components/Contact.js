@@ -3,20 +3,19 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import emailjs from '@emailjs/browser';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const Contact = () => {
     const form = useRef();
     const [buttonText, setButtonText] = useState('Enviar');
     const [errors, setErrors] = useState({});
-    const [emailSent, setEmailSent] = useState({});
-    const emailSend = {};
+    const [emailStatus, setEmailStatus] = useState({ success: false, message: '' });
 
     const validateForm = () => {
         const formData = new FormData(form.current);
         const name = formData.get('user_name').trim();
         const lastName = formData.get('user_lastName').trim();
         const email = formData.get('user_email').trim();
-        const phone = formData.get('user_phone').trim();
         const message = formData.get('message').trim();
 
         const newErrors = {};
@@ -40,10 +39,6 @@ export const Contact = () => {
         }
 
         setErrors(newErrors);
-        emailSend.send = '';
-        setEmailSent(emailSend);
-
-
         return Object.keys(newErrors).length === 0;
     };
 
@@ -60,21 +55,26 @@ export const Contact = () => {
         }
 
         setButtonText('Enviando...');
+        setEmailStatus({ success: false, message: '' });
 
         emailjs.sendForm('service_j437ubh', 'template_4w5yn3i', form.current, '83JzCBQToFNvjxHz6')
             .then(
                 () => {
-                    emailSend.send = "Correo enviado correctamente, me pondré en contacto contigo lo más pronto posible";
+                    setEmailStatus({
+                        success: true,
+                        message: "¡Mensaje enviado con éxito! Me pondré en contacto contigo lo más pronto posible."
+                    });
                     form.current.reset();
                     setButtonText('Enviar');
                 },
                 (error) => {
-                    emailSend.send = "Error al enviar el email";
+                    setEmailStatus({
+                        success: false,
+                        message: "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo."
+                    });
                     setButtonText('Enviar');
                 },
             );
-
-        setEmailSent(emailSend);
     };
 
     return (
@@ -119,8 +119,23 @@ export const Contact = () => {
                                         <label>Mensaje</label>
                                         <textarea className='form-text-area' name="message" />
                                         {errors.message && <p className="error-message">{errors.message}</p>}
-                                        <input type="submit" value={buttonText} className="btn btn-primary form-button" />
-                                        {emailSent.send && <p className="send-message">{emailSent.send}</p>}
+                                        <div className="text-center">
+                                            <button type="submit" className="form-button">
+                                                {buttonText}
+                                            </button>
+                                        </div>
+                                        <AnimatePresence>
+                                            {emailStatus.message && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: -10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -10 }}
+                                                    className={emailStatus.success ? "send-message" : "error-message"}
+                                                >
+                                                    {emailStatus.message}
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </Col>
                                 </Row>
                             </Row>

@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 export function Technologies() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    const checkMobile = useCallback(() => {
+        setIsMobile(window.innerWidth <= 768);
+    }, []);
+
+    useEffect(() => {
+        checkMobile();
+        let resizeTimer;
+        const handleResize = () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                window.requestAnimationFrame(checkMobile);
+            }, 250);
+        };
+        
+        window.addEventListener('resize', handleResize, { passive: true });
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            clearTimeout(resizeTimer);
+        };
+    }, [checkMobile]);
+
     const technologies = [
         { name: "React", logo: process.env.PUBLIC_URL + "/react.png", duration: 3, delay: 0 },
         { name: "Next.js", logo: process.env.PUBLIC_URL + "/nextjs.png", duration: 2.5, delay: 0.2 },
@@ -22,23 +45,62 @@ export function Technologies() {
                     <motion.div
                         key={index}
                         className="technology-item"
-                        initial={{ y: -10 }}
-                        animate={{
-                            y: [10, -10],
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ 
+                            opacity: 1, 
+                            y: 0,
+                            ...(isMobile ? {} : {
+                                y: [0, -10, 0],
+                                transition: {
+                                    y: {
+                                        duration: tech.duration,
+                                        repeat: Infinity,
+                                        repeatType: "reverse",
+                                        ease: "easeInOut",
+                                        delay: tech.delay
+                                    }
+                                }
+                            })
                         }}
-                        transition={{
-                            duration: tech.duration,
-                            ease: "easeInOut",
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                            delay: tech.delay,
+                        viewport={{ once: true }}
+                        whileHover={!isMobile ? {
+                            scale: 1.1,
+                            boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
+                            transition: { duration: 0.3 }
+                        } : {}}
+                        style={{
+                            transform: 'translateZ(0)',
+                            willChange: 'transform',
+                            contain: 'layout style paint'
                         }}
                     >
-                        <img
-                            src={tech.logo}
-                            alt={`${tech.name} logo`}
-                            className="technology-logo"
-                        />
+                        <div className="technology-content">
+                            <motion.img
+                                src={tech.logo}
+                                alt={`${tech.name} logo`}
+                                className="technology-logo"
+                                loading="lazy"
+                                whileHover={!isMobile ? {
+                                    rotate: 360,
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 }
+                                } : {}}
+                                style={{
+                                    transform: 'translateZ(0)',
+                                    willChange: 'transform'
+                                }}
+                            />
+                            <motion.span 
+                                className="technology-name"
+                                whileHover={!isMobile ? {
+                                    scale: 1.1,
+                                    color: "#6E07F3",
+                                    transition: { duration: 0.3 }
+                                } : {}}
+                            >
+                                {tech.name}
+                            </motion.span>
+                        </div>
                     </motion.div>
                 ))}
             </div>

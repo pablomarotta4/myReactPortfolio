@@ -1,54 +1,68 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col, Accordion, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 export function About() {
     return (
-        <div className='#about'>
-                <Container href="#about" fluid className="about-top-section">
-                    <div className='text-center'>
-                        <p className='about-text'>
-                            Soy un desarrollador apasionado con habilidades técnicas sólidas y un enfoque creativo para resolver problemas. Comunicador efectivo y colaborador entusiasta, comprometido con el crecimiento personal y profesional. Busco aplicar mis conocimientos en entornos desafiantes y en constante evolución.
-                        </p>
-                    </div>
-                </Container>  
-            {/* <Container className='about-middle-section'>
-            <Row className='box'>
-                <Col>
-                    <Container className='skill-item'>
-                    <img src="https://cdn-icons-png.flaticon.com/128/8016/8016946.png" alt="html" width="30px" height="30px" />
-                    <h2 className='skill-title'>Desarrollador</h2>
-                    <p className="skill-sub-title">Desarrollador con enfoque en soluciones innovadoras y efectivas, siempre buscando mejorar y aprender.</p>
-                    <p className='skill-text-title'>Lenguajes:</p>
-                    <p className='skill-text'> Java, C+, JavaScript, HTML, CSS, React, mySQL </p>
-                    <p className='skill-text-title'>Herramientas:</p>
-                    <p className='skill-text'>Git, Github, VSCode</p>
-                    </Container>
-                </Col>
-                <Col>
-                    <Container className='skill-item'>
-                    <img src="https://cdn-icons-png.flaticon.com/128/3439/3439472.png" alt="html" width="30px" height="30px" />
-                    <h2 className='skill-title'>Soft skills</h2>
-                    <p className="skill-sub-title">Colaborador proactivo y comunicador claro, excelente en trabajo en equipo y resolución de problemas complejos.</p>
-                    <p className='skill-text-title'>Habilidades:</p>
-                    <p className='skill-text'>Comunicación Efectiva, Trabajo en equipo, Resolución de Problemas, Adaptabilidad y Flexibilidad</p>
-
-                    </Container>
-                </Col>
-                <Col>
-                    <Container className='skill-item'>
-                    <img src="https://cdn-icons-png.flaticon.com/128/1245/1245112.png" alt="html" width="30px" height="30px" />
-                    <h2 className='skill-title'>Formación</h2>
-                    <p className="skill-sub-title">Estudiante de ingeniería en computación, comprometido con el aprendizaje continuo y la adaptación a nuevas tecnologías.</p>
-                    <p className='skill-text-title'>Estudios:</p>
-                    <p className='skill-text'>Universidad de la República (UDELAR), SoloLearning.</p>
-                    <p className='skill-text-title'>Otros:</p>
-                    <p className='skill-text'>Manejo del inglés que permite comunicación fluida.</p>
-                    </Container>
-                </Col>
-            </Row>
-        </Container> */}
-                
-        </div>
+        <section id="about" className="about">
+            <Container fluid className="about-top-section">
+                <Row className="justify-content-center">
+                    <Col md={8} lg={6}>
+                        <motion.div 
+                            className="about-content"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="about-title">Sobre mí</h2>
+                            <p className="about-text">
+                                Soy un desarrollador apasionado por crear soluciones tecnológicas innovadoras y eficientes.
+                                Me destaco por mi capacidad de adaptación a nuevas tecnologías y mi compromiso con el aprendizaje continuo,
+                                siempre buscando la mejor manera de resolver desafíos a través del código.
+                            </p>
+                            <div className="about-highlights">
+                                <Row>
+                                    <Col md={4}>
+                                        <motion.div 
+                                            className="highlight-item"
+                                            whileHover={{ scale: 1.05 }}
+                                            transition={{ type: "spring", stiffness: 300 }}
+                                        >
+                                            <span className="highlight-emoji">💻</span>
+                                            <h3>Desarrollador</h3>
+                                            <p>Desarrollo de aplicaciones y sistemas, utilizando las mejores prácticas y tecnologías modernas</p>
+                                        </motion.div>
+                                    </Col>
+                                    <Col md={4}>
+                                        <motion.div 
+                                            className="highlight-item"
+                                            whileHover={{ scale: 1.05 }}
+                                            transition={{ type: "spring", stiffness: 300 }}
+                                        >
+                                            <span className="highlight-emoji">🎓</span>
+                                            <h3>Formación</h3>
+                                            <p>Estudiante de Ingeniería en Computación en UdelaR, con formación continua en tecnologías emergentes</p>
+                                        </motion.div>
+                                    </Col>
+                                    <Col md={4}>
+                                        <motion.div 
+                                            className="highlight-item"
+                                            whileHover={{ scale: 1.05 }}
+                                            transition={{ type: "spring", stiffness: 300 }}
+                                        >
+                                            <span className="highlight-emoji">🚀</span>
+                                            <h3>Innovación</h3>
+                                            <p>Enfoque en soluciones creativas y eficientes, siempre buscando la mejor manera de resolver desafíos técnicos</p>
+                                        </motion.div>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </motion.div>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
     );
 }
 
